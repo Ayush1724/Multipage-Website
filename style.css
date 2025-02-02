@@ -493,6 +493,194 @@ position: absolute;
         margin: 0;
     }
 }
+.sec11{
+    display: grid;
+    grid-template-columns: repeat(3,auto);
+    grid-template-rows: repeat(3,auto);
+    padding-left: 130px;
+    /* height: 100vh; */
+    font-family: "Roboto", sans-serif;
+    align-items: center;
+    padding-left: 180px;
+    background-color: rgb(230, 231, 232);
+    padding-bottom: 40px;
+    color: black;
+    
+}
+
+@media screen and (max-width: 800px) {
+    .sec8{
+        
+        grid-template-columns: repeat(2,auto);
+        grid-template-rows: repeat(2,auto);
+       
+    }
+    .sec11{
+        
+        grid-template-columns: repeat(2,auto);
+        grid-template-rows: repeat(2,auto);
+       
+    }
+}
+.name{
+    font-weight: bold;
+    color: black;
+}
+.price{
+    color: rgb(6, 224, 119);
+    font-weight: 600;
+}
+.stars{
+    color: orange;
+}
+.View{
+    font-weight: bold;
+    font-size: 13px;
+    border: 2px solid rgb(6, 224, 119);
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 40px;
+    background-color: white;
+    font-family: "Roboto", sans-serif;
+}
+.View:hover{
+    background-color: blue;
+}
+.sec12{
+    display: flex;
+    justify-content: space-evenly;
+    font-family: "Roboto", sans-serif;
+}
+.sec12name{
+    font-size: 80px;
+    font-weight: 700;
+    padding-left: 50px;
+}
+.sec12price{
+    font-size: 30px;
+    color: rgb(6, 224, 119);
+    padding-left: 50px;
+}
+.sec12price b{
+    color: black;
+}
+.sec12stars{
+    color: orange;
+    padding-left: 50px;
+}
+.sec12about{
+    text-decoration: underline;
+    text-decoration-style: solid;
+    padding-left: 50px;
+}
+.sec12details{
+    padding-left: 50px;
+    padding-right: 50px;
+    margin-top: -10px;
+    padding-bottom: 30px;
+}
+.sec12size{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding-bottom: 30px;
+    
+}
+.sz button{
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 5px ;
+    padding-bottom:5px  ;
+    font-size: 15px;
+    background-color: white;
+
+}
+.sz button:hover {
+    background-color: black;
+    font-size: 15px;
+    color: white;
+    animation-name: disco;
+    animation-duration:1000000s;
+}
+ @keyframes disco{
+    to{
+         font-size:15px ;
+         color: white;
+         background-color: black;
+    }
+    from{
+        font-size:15px ;
+        color: white;
+        background-color: black;
+    }
+} 
+.sec12sec1{
+    display: flex;
+    justify-content: space-around;
+}
+.sec12quantity{
+    font-size: 20px;
+}
+.sec12quantity input{
+    font-size: 15px;
+    padding-left: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-right: 10px;
+    
+}
+.sec12buy button {
+    font-size: 20px;
+    padding-left: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-right: 20px;
+    border-radius: 10px;
+}
+.sec12buy button:hover {
+    background-color: blue;
+    font-size: 25px;
+    color: white;
+    animation-name: disc;
+    animation-duration:1000000s;
+}
+@media screen and (max-width: 800px) {
+    .sec12{
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+    .sec12sec1{
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+    .sec13{
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+    
+}
+
+
+ @keyframes disc{
+    to{
+         font-size:25px ;
+         color: white;
+         background-color: blue;
+    }
+    from{
+        font-size:25px ;
+        color: white;
+        background-color: blue;
+    }
+} 
+.sec13{
+    padding: 20px;
+    text-decoration: underline;
+    text-decoration-style: 2px solid ;
+}
 
 
 
