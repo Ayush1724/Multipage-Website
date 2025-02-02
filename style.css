@@ -1,0 +1,331 @@
+.navbar1{
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    color: rgb(131, 144, 155);
+    font-family: "Roboto", sans-serif;
+    
+}
+.op1{
+    border-right: 2px solid gold;
+}
+.navbar2{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: sticky; 
+    z-index: 100000;
+    top: 0px;
+    font-family: "Roboto", sans-serif;
+    padding: 10px;
+    background-color: white;
+}
+.list{
+    font-weight: 700;
+}
+.navbar2 label{
+    display: none;
+}
+#check{
+    display: none;
+}
+#check:checked~.navbar2 .list{
+    display: block;
+}
+.navbar2 ul{
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+.heading{
+    font-family: "Playfair Display", serif;
+    font-size: 40px;
+}
+@media screen and (max-width:800px) {
+    .navbar2{
+        height: 90px;
+        flex-wrap: wrap;
+        align-items: center;
+        
+    }
+    .navbar2 label{
+        display: block;
+    }
+    .list{
+        display: none;
+        position: absolute;
+        top: 100px;
+        width: 100%;
+        left: 200px;
+
+    }
+}
+.sec1{
+    background-color: rgb(238, 243, 247);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: "Roboto", sans-serif;
+}
+.sec1div1{
+    padding-left: 200px;
+    padding-bottom: 100PX;
+    padding-top: 100px;
+}
+.sec1div1 h1{
+    color: rgb(12, 178, 12);
+    text-align: left;
+    font-size: 70px;
+}
+.p1{
+    color: rgb(131, 142, 152);
+    text-align: left;
+    font-size: 13px;
+    font-family: "Playfair Display", serif;
+    margin-top: -60px;
+}
+.p2{
+    color: rgb(12, 178, 12);
+    text-align: left;
+}
+.shoebar{
+    background-color: rgb(238, 243, 247);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: "Roboto", sans-serif;
+}
+.txt{
+    padding-left: 200px;
+    padding-bottom: 100PX;
+    padding-top: 100px;
+}
+.txt h1{
+    color: rgb(12, 178, 12);
+    text-align: left;
+    font-size: 70px;
+}
+.p1{
+    color: rgb(131, 142, 152);
+    text-align: left;
+    font-size: 13px;
+    font-family: "Playfair Display", serif;
+    margin-top: -60px;
+}
+.p2{
+    color: rgb(12, 178, 12);
+    text-align: left;
+}
+.sec1div2{
+    padding-right: 200px;
+}
+.sec2{
+    font-family: "Playfair Display", serif;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 40px;
+}
+.ourcollections{
+    font-size: 50px;
+}
+.sec2 p {
+    font-size: 13px;
+    margin-top: -40px;
+    font-family: "Playfair Display", serif;
+    color: rgb(131, 142, 152);
+}
+.sec3{
+    display: flex;
+    justify-content: space-around;
+    font-family: "Playfair Display", serif;
+    font-size: 13px;
+}
+.sec3div1{
+    display: flex;
+    gap: 10px;
+}
+.sec4{
+    display: grid;
+    grid-template-columns: repeat(4,auto);
+    grid-template-rows: repeat(2,auto);
+    padding-left: 130px;
+    /* height: 100vh; */
+    font-family: "Roboto", sans-serif;
+    align-items: center;
+}
+.name{
+    font-weight: bold;
+    color: black;
+}
+.price{
+    color: rgb(6, 224, 119);
+    font-weight: 600;
+}
+.stars{
+    color: orange;
+}
+.View{
+    font-weight: bold;
+    font-size: 13px;
+    border: 2px solid rgb(6, 224, 119);
+    text-align: center;
+    padding: 20px;
+    margin-bottom: 40px;
+    background-color: white;
+    font-family: "Roboto", sans-serif;
+}
+.View:hover{
+    background-color: blue;
+}
+.sec5{
+    background-color: rgb(238, 243, 247);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: "Roboto", sans-serif;
+}
+.sec5div1{
+    padding-left: 200px;
+    padding-bottom: 100PX;
+    padding-top: 100px;
+}
+.sec5div1 h1{
+    font-size: 50px;
+}
+.sec5div1 p{
+    color: rgb(131, 142, 152);
+    text-align: left;
+    font-size: 13px;
+    font-family: "Playfair Display", serif;
+    margin-top: -40px;
+}
+.Buy{
+    color:white;
+    background-color: rgb(6, 224, 119);
+    border: 2px solid rgb(6, 224, 119);
+    padding-left: 13px;
+    padding-right: 13px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+}
+.sec6{
+    display: flex;
+    padding-top: 50px;
+    padding-left: 150px;
+    padding-right: 50px;
+    gap: 40px;
+    align-items: center;
+    font-family: "Roboto", sans-serif;
+
+}
+.date1{
+    background-color:rgb(6, 224, 119) ;
+    color: white;
+    height: 50px;
+    width: 50px;
+    position: relative;
+    top:-170px;
+    left: 10px;
+}
+.date2{
+    background-color:rgb(6, 224, 119) ;
+    color: white;
+    height: 50px;
+    width: 50px;
+    position: relative;
+    top:-170px;
+    left: 10px;
+}
+.date3{
+    background-color:rgb(6, 224, 119) ;
+    color: white;
+    height: 50px;
+    width: 50px;
+    position: relative;
+    top:-170px;
+    left: 10px;
+}
+.sec6 h1{
+    margin-top: -45px;
+    font-size: 20px;
+}
+.sec6 p{
+    color: rgb(131, 142, 152);
+    font-size: 13px;
+    text-align: left;
+    margin-top: -10px;
+}
+.read{
+    border: 0px;
+    color:rgb(6, 224, 119) ;
+    background-color: white;
+    padding-bottom: 40px;
+    
+}
+.sec7{
+    display: flex;
+    background-color: rgb(238, 243, 247);
+    padding-left: 100px;
+    padding-top: 80px;
+    padding-bottom: 60px;
+    font-family: "Roboto", sans-serif;
+}
+.sec7 h1{
+    font-size: 50px;
+    margin-top: -30px;
+}
+.footstar{
+    color: orange;
+    margin-top: -30px;
+    font-size: 15px;
+}
+.para{
+    color: rgb(131, 142, 152);
+    text-align: left;
+    font-size: 13px;
+    font-family: "Playfair Display", serif;
+}
+.sec8{
+    display: flex;
+    justify-content: space-around;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    padding-right: 60px;
+    padding-left: 60px;
+    font-family: "Roboto", sans-serif;
+}
+.sec8 h1{
+    font-size: 20px;
+}
+.mf{
+    color: rgb(131, 142, 152);
+    text-align: left;
+    font-size: 13px;
+    font-family: "Playfair Display", serif;
+}
+.sec9{
+    display: flex;
+    justify-content: space-around;
+    color: rgb(131, 142, 152);
+    background-color: rgb(25, 24, 24);
+    padding: 50px;
+    font-family: "Roboto", sans-serif;
+}
+.sub{
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    padding: 15px;
+    background-color: rgb(25, 24, 24);
+}
+.arrow{
+    background-color: rgb(25, 24, 24);
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: none;
+    color:rgb(6, 224, 119) ;
+
+}
+
+
