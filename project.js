@@ -85,4 +85,9 @@ const up =()=>{
 
     
 }
+let size=0
+function tgl1(){
+    let a=document.querySelector("#b1")
+    a.classList.toggle(".sz")
+}
 
