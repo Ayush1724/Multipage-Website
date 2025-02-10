@@ -595,6 +595,11 @@ position: absolute;
     background-color: white;
 
 }
+.abc{
+    background-color: black;
+    font-size: 15px;
+    color: white;
+}
 .sz button:hover {
     background-color: black;
     font-size: 15px;
