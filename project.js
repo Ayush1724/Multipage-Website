@@ -1,3 +1,4 @@
+let fname=""
 function val() {
     let fname = document.querySelector('#fname').value
     let lname = document.querySelector('#lname').value
@@ -89,6 +90,35 @@ let size=0
 function tgl1() {
     let a=document.querySelector("#b1")
     a.classList.add('abc')
-
+    size="6 uk"
 }
+function tgl2() {
+    let a=document.querySelector("#b1")
+    a.classList.add('abc')
+    size="7 uk"
+}
+function tgl3() {
+    let a=document.querySelector("#b1")
+    a.classList.add('abc')
+    size="8 uk"
 
+}function tgl4() {
+    let a=document.querySelector("#b1")
+    a.classList.add('abc')
+    size="9 uk"
+}
+function tgl5() {
+    let a=document.querySelector("#b1")
+    a.classList.add('abc')
+    size="10 uk"
+}
+function tgl6() {
+    let a=document.querySelector("#b1")
+    a.classList.add('abc')
+    size="11 uk"
+}
+function tgl7() {
+    let a=document.querySelector("#b1")
+    a.classList.add('abc')
+    size="12 uk"
+}
