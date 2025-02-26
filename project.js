@@ -65,7 +65,7 @@ function val() {
         return false;
     }
 
-    return true; // Form submission proceeds
+    return true;
 }
 let data=JSON.parse(localStorage.getItem("userdata"))
 const up =()=>{
@@ -86,39 +86,60 @@ const up =()=>{
 
     
 }
-let size=0
-function tgl1() {
-    let a=document.querySelector("#b1")
-    a.classList.add('abc')
-    size="6 uk"
-}
-function tgl2() {
-    let a=document.querySelector("#b1")
-    a.classList.add('abc')
-    size="7 uk"
-}
-function tgl3() {
-    let a=document.querySelector("#b1")
-    a.classList.add('abc')
-    size="8 uk"
+let selectedSize = "";
 
-}function tgl4() {
-    let a=document.querySelector("#b1")
-    a.classList.add('abc')
-    size="9 uk"
+// Function to highlight selected size button and set size
+function selectSize(size, buttonId) {
+    document.querySelectorAll(".sz button").forEach(btn => btn.classList.remove("abc"));
+
+    let btn = document.getElementById(buttonId);
+    btn.classList.add("abc");
+
+    selectedSize = size;
 }
-function tgl5() {
-    let a=document.querySelector("#b1")
-    a.classList.add('abc')
-    size="10 uk"
+
+// Fetch and display data from the server
+async function fetchData() {
+    try {
+        // Show loading state
+        document.querySelector('#data').innerHTML = "<tr><td colspan='9'>Loading...</td></tr>";
+
+        // Fetch data from the API
+        let response = await fetch("http://localhost:3000/consumer");
+        if (!response.ok) throw new Error("Failed to fetch data");
+
+        // Parse the JSON data
+        let data = await response.json();
+
+        // Generate table rows
+        let tableContent = data.map((e) => `
+            <tr>
+                <td>${e.id}</td>
+                <td>${e.name}</td>
+                <td>${e.lname}</td>
+                <td>${e.pname}</td>
+                <td>${e.size}</td>
+                <td>${e.quantity}</td>
+                <td>$${e.price}</td>
+                <td>$${e.total}</td>
+                <td><button onclick="deleteItem('${e.id}')">Remove</button></td>
+            </tr>
+        `).join("");
+
+        // Update the table content
+        document.querySelector('#data').innerHTML = tableContent;
+    } catch (error) {
+        console.error("Error fetching data:", error);
+        // Display an error message to the user
+        document.querySelector('#data').innerHTML = "<tr><td colspan='9'>Error loading data. Please try again later.</td></tr>";
+    }
 }
-function tgl6() {
-    let a=document.querySelector("#b1")
-    a.classList.add('abc')
-    size="11 uk"
-}
-function tgl7() {
-    let a=document.querySelector("#b1")
-    a.classList.add('abc')
-    size="12 uk"
+
+// Call the function to fetch the data
+fetchData();
+
+// Define the deleteItem function
+function deleteItem(id) {
+    console.log(`Deleting item with ID: ${id}`);
+    // Add your logic to delete the item here
 }
