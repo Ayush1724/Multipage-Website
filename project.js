@@ -151,8 +151,8 @@ function order2(){
         name:document.querySelector("#fname").value,
         pname:"Adidas Superstar Superfinger",
         quantity:q,
-        price:"150",
-        total:q*150,
+        price:"250",
+        total:q*250,
     }
     fetch('http://localhost:3000/Id',{
         method:"POST",
