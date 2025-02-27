@@ -86,3 +86,46 @@ const up =()=>{
 
     
 }
+async function data() {
+    let data = await fetch("http://localhost:3000/Id")
+    let final_data = await data.json()
+    let tdata = final_data.map((e)=>`
+    <tr>
+    <td>${e.id}</td>
+    <td>${e.name}</td>
+    <td>${e.pname}</td>
+    <td>${e.quantity}</td>
+    <td>${e.price}</td>
+    <td>${e.total}</td>
+    <td><button onclick="mydelete('${e.id}')">Remove</button></td>
+    </tr>
+    `).join("")
+    document.querySelector('#displaydata').innerHTML=tdata
+}
+data()
+function mydelete(id){
+    fetch(`http://localhost:3000/Id/${id}`,{
+        method:"DELETE"
+    })
+    .then(res=>alert("Remove"))
+}
+function order(){
+    let q =document.querySelector("#quan").value
+    let frmdata ={
+        name:document.querySelector("#fname").value,
+        pname:"Nike Air Zoom",
+        quantity:q,
+        price:"300",
+        total:q*300,
+    }
+    fetch('http://localhost:3000/Id',{
+        method:"POST",
+        headers:{
+            'Content-type':'application/json'
+        },
+        body:JSON.stringify(frmdata)
+    })
+    .then(r=>alert("data is inserted..."))
+}
+
+
