@@ -127,5 +127,39 @@ function order(){
     })
     .then(r=>alert("data is inserted..."))
 }
-
-
+function order1(){
+    let q =document.querySelector("#quan1").value
+    let frmdata ={
+        name:document.querySelector("#fname").value,
+        pname:"Adidas Snake",
+        quantity:q,
+        price:"150",
+        total:q*150,
+    }
+    fetch('http://localhost:3000/Id',{
+        method:"POST",
+        headers:{
+            'Content-type':'application/json'
+        },
+        body:JSON.stringify(frmdata)
+    })
+    .then(r=>alert("data is inserted..."))
+}
+function order2(){
+    let q =document.querySelector("#quan2").value
+    let frmdata ={
+        name:document.querySelector("#fname").value,
+        pname:"Adidas Superstar Superfinger",
+        quantity:q,
+        price:"150",
+        total:q*150,
+    }
+    fetch('http://localhost:3000/Id',{
+        method:"POST",
+        headers:{
+            'Content-type':'application/json'
+        },
+        body:JSON.stringify(frmdata)
+    })
+    .then(r=>alert("data is inserted..."))
+}
