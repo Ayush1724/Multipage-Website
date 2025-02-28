@@ -1,4 +1,5 @@
-let fname=""
+var fname
+
 function val() {
     let fname = document.querySelector('#fname').value
     let lname = document.querySelector('#lname').value
@@ -12,6 +13,7 @@ function val() {
         passw :document.querySelector("#pass").value
     }
     localStorage.setItem("userdata",JSON.stringify(abc))
+    localStorage.setItem("fname",fname)
 
     if (fname == '') {
         alert("Please enter your First Name");
@@ -86,7 +88,7 @@ const up =()=>{
 
     
 }
-async function data() {
+async function dataa() {
     let data = await fetch("http://localhost:3000/Id")
     let final_data = await data.json()
     let tdata = final_data.map((e)=>`
@@ -102,7 +104,7 @@ async function data() {
     `).join("")
     document.querySelector('#displaydata').innerHTML=tdata
 }
-data()
+dataa()
 function mydelete(id){
     fetch(`http://localhost:3000/Id/${id}`,{
         method:"DELETE"
@@ -112,7 +114,7 @@ function mydelete(id){
 function order(){
     let q =document.querySelector("#quan").value
     let frmdata ={
-        name:document.querySelector("#fname").value,
+        name:localStorage.getItem("fname"),
         pname:"Nike Air Zoom",
         quantity:q,
         price:"300",
@@ -130,7 +132,7 @@ function order(){
 function order1(){
     let q =document.querySelector("#quan1").value
     let frmdata ={
-        name:document.querySelector("#fname").value,
+        name:localStorage.getItem("fname"),
         pname:"Adidas Snake",
         quantity:q,
         price:"150",
@@ -148,7 +150,7 @@ function order1(){
 function order2(){
     let q =document.querySelector("#quan2").value
     let frmdata ={
-        name:document.querySelector("#fname").value,
+        name:localStorage.getItem("fname"),
         pname:"Adidas Superstar Superfinger",
         quantity:q,
         price:"250",
